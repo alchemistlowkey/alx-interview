@@ -7,7 +7,7 @@
 - [What are Python Algorithms](https://builtin.com/data-science/python-algorithms)
 
 ## Additional Resources
-- [Mock Technical Interview](https://www.youtube.com/watch?v=1qw5ITr3k9Ehttps://www.youtube.com/watch?v=1qw5ITr3k9E)
+- [Mock Technical Interview](https://www.youtube.com/watch?v=1qw5ITr3k9E)
 
 ## Must Know
 To successfully complete this project, you should revise the following Python concepts:
