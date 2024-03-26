@@ -1,4 +1,5 @@
 # Pascal's Triangle code challenge
+![binomial](https://github.com/alchemistlowkey/alx-interview/assets/46524038/d52b13e6-db97-45f4-a6d8-d2bd3f069d56)
 
 ## Resources
 
