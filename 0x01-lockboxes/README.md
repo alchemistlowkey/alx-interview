@@ -1,4 +1,5 @@
 # Lockboxes
+![lockboxes](https://github.com/alchemistlowkey/alx-interview/assets/46524038/ca4f0dc2-0348-4178-b032-8e99a698c1f3)
 
 ## Additional Resources
 - [Mock Technical Interview](https://www.youtube.com/watch?v=V8DGdPkBBxg)
