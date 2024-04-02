@@ -1,4 +1,6 @@
 # UTF-8 Validation
+![utf8](https://github.com/alchemistlowkey/alx-interview/assets/46524038/fbbd2c09-054c-42c5-86c5-7ed8806684f7)
+![validation](https://github.com/alchemistlowkey/alx-interview/assets/46524038/c035738a-5e42-403c-b939-4bea55a87dbd)
 
 For the “0x04. UTF-8 Validation” project, you will need to apply your knowledge in bitwise operations, understanding of the UTF-8 encoding scheme, and Python programming skills to validate whether a given dataset represents a valid UTF-8 encoding. Here’s a list of concepts and resources that will be helpful:
 
