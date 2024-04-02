@@ -1,5 +1,5 @@
 # Minimum Operations
-![minimum_ops](https://github.com/alchemistlowkey/alx-interview/assets/46524038/09a6b985-4e7c-44de-9ac9-1fd1d7f8ac9a)
+![minimum_ops](https://github.com/alchemistlowkey/alx-interview/assets/46524038/5f84c932-476c-4ad2-951a-7683314639b1)
 
 ## Must Know
 For this project, you will need to understand several key algorithmic and mathematical concepts to devise a solution that efficiently calculates the minimum number of operations to achieve a given number of characters using only “Copy All” and “Paste” operations. Here is a list of concepts and resources that will be helpful:
