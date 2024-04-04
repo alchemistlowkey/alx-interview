@@ -15,24 +15,19 @@ def validUTF8(data):
         bool: True if data is a valid UTF-8 encoding, else False.
     """
 
-    remaining_bytes = 0
-
-    for size in data:
-        if remaining_bytes:
-            if size >> 6 == 0b10:
-                remaining_bytes -= 1
-            else:
-                return False
+    byte = 0
+    while byte < len(data):
+        if data[byte] >> 7 == 0:
+            byte += 1
         else:
-            if size >> 7 == 0:
-                remaining_bytes = 0
-            elif size >> 5 == 0b110:
-                remaining_bytes = 1
-            elif size >> 4 == 0b1110:
-                remaining_bytes = 2
-            elif size >> 3 == 0b11110:
-                remaining_bytes = 3
-            else:
+            num_bytes = 0
+            while (data[byte] >> (7 - num_bytes)) & 1:
+                num_bytes += 1
+            if num_bytes < 2 or num_bytes > 4:
                 return False
-
-    return remaining_bytes == 0
+            for size in range(1, num_bytes):
+                byte += 1
+                if byte >= len(data) or (data[byte] >> 6) != 0b10:
+                    return False
+            byte += 1
+    return True
