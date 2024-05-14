@@ -37,7 +37,7 @@ Result: Ben has the most wins
 """
 
 
-def is_prime(number):
+def is_prime(n):
     """
     Check if a number is prime.
 
@@ -47,12 +47,20 @@ def is_prime(number):
     Returns:
     bool: True if the number is prime, False otherwise.
     """
-    if number < 2:
-        return False
-    for i in range(2, int(number**0.5) + 1):
-        if number % i == 0:
-            return False
-    return True
+    sieve = [True] * n
+    for i in range(3, int(n**0.5) + 1, 2):
+        if sieve[i]:
+            sieve[i * i::2 * i] = [False] * int((n - i * i - 1) / (2 * i) + 1)
+    return [2] + [i for i in range(3, n, 2) if sieve[i]]
+
+
+def playMatch(n):
+    """
+    plays a single round
+    """
+    primes = is_prime(n + 1)
+    return 1 - (len(primes) % 2) if n > 1 else 1
+
 
 def isWinner(x, nums):
     """
@@ -67,24 +75,12 @@ def isWinner(x, nums):
         The name of the player who won the most rounds.
         If the winner cannot be determined, returns None.
     """
-    maria = 0
-    ben = 0
-
-    for n in nums:
-        if n == 1:
-            ben += 1
-            continue
-
-        prime_counter = sum(1 for i in range(2, n + 1) if is_prime(i))
-
-        if prime_counter % 2 == 0:
-            ben += 1
-        else:
-            maria += 1
-
-    if maria > ben:
-        return "Maria"
-    elif ben > maria:
-        return "Ben"
-    else:
+    if type(x) is not int or x < 1:
         return None
+    players = {0: 'Maria', 1: 'Ben'}
+    wins = {0: 0, 1: 0}
+    for num in nums:
+        wins[playMatch(num)] += 1
+    return (None if wins[0] == wins[1]
+            else players[0] if wins[0] > wins[1]
+            else players[1])
